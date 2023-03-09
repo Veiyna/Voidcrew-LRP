@@ -381,7 +381,7 @@
 		if (!template.disable_passwords)
 			var/password_cost = template.get_password_cost()
 			// Prompt for password purchasing
-			var/password_choice = tgui_alert(src, "Enable password protection for [password_cost] voidcoins", "Password Protection", list("Yes", "No"))
+			var/password_choice = tgui_alert(src, "Enable password protection for [!(password_cost == 0) ? "[password_cost] voidcoins" : "Free"]", "Password Protection", list("Yes", "No"))
 			if(password_choice == null)
 				return LateChoices()
 			if(password_choice == "Yes")

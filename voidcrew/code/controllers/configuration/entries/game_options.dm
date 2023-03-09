@@ -17,3 +17,5 @@
 /datum/config_entry/number/initial_combat_shuttle_pairs
 	config_entry_value = 0
 	min_val = 0
+
+/datum/config_entry/flag/free_ship_passwords

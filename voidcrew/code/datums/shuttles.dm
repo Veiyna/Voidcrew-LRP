@@ -22,6 +22,9 @@
  * Returns the cost of the password, based on the total cost of the ship
  */
 /datum/map_template/shuttle/proc/get_password_cost()
+	if (CONFIG_GET(flag/free_ship_passwords))
+		return 0
+
 	switch (cost)
 		if (1 to 450)
 			return cost * 1
